@@ -24,14 +24,12 @@ public class UtilDb {
 
 	public void connect() {
 		if (connection == null) {
-            String dbURL = "jdbc:sqlserver://localhost\\PHAMTHANHPHONG:1433;databaseName=SportShop;user=sa;password=sa";
-			if (this.connection == null) {
-				try {
-					Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-					connection = DriverManager.getConnection(dbURL);
-				} catch (Exception e) {
-					System.out.println(e.getMessage());
-				}
+            String dbURL = "jdbc:mysql://localhost:3306;databaseName=advancedProgramming;user=root;password=dunghoinua";
+			try {
+				Class.forName("com.mysql.jdbc.Driver");
+				connection = DriverManager.getConnection(dbURL);
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
 			}
 		}
 	}
