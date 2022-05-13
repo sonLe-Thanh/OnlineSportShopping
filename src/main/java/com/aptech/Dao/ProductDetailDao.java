@@ -35,7 +35,7 @@ public class ProductDetailDao {
 				item.setInventory(rs.getInt(("Inventory")));
 				item.setPrice(rs.getInt(("Price")));
 				
-				//Lấy khóa ngoại
+				
 				ProductDao productDao = new ProductDao();
 				item.setProduct(productDao.getByProductID(rs.getInt("ProductId")));
 				SizeDao sizeDao = new SizeDao();
@@ -64,7 +64,7 @@ public class ProductDetailDao {
 				item.setInventory(rs.getInt(("Inventory")));
 				item.setPrice(rs.getInt(("Price")));
 				
-				//Lấy khóa ngoại
+				
 				ProductDao productDao = new ProductDao();
 				item.setProduct(productDao.getByProductID(rs.getInt("ProductId")));
 				SizeDao sizeDao = new SizeDao();

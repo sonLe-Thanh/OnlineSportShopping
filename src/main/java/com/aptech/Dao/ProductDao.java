@@ -23,7 +23,8 @@ public class ProductDao {
 
 	public ArrayList<Product> getAll() {
 		ArrayList<Product> list = new ArrayList<Product>();
-
+		
+		// Only get 25 products to display
 		String query = "SELECT TOP 25 * FROM Product";
 		Statement stm;
 		try {
@@ -40,7 +41,7 @@ public class ProductDao {
             	item.setProductType(categoryDao.getProductTypeByID(rs.getInt("ProductTypeId")));
             	item.setSportType(categoryDao.getSportTypeByID(rs.getInt("SportTypeId")));
             	
-            	//Thêm mấy tấm ảnh nữa
+            	//Add some image
             	ImageDao imageDao = new ImageDao();
             	item.setImages(imageDao.getByIdProduct(rs.getInt("id")));
             	
@@ -76,7 +77,7 @@ public class ProductDao {
             	item.setProductType(categoryDao.getProductTypeByID(rs.getInt("ProductTypeId")));
             	item.setSportType(categoryDao.getSportTypeByID(rs.getInt("SportTypeId")));
             	
-            	//Thêm mấy tấm ảnh nữa
+            
             	ImageDao imageDao = new ImageDao();
             	item.setImages(imageDao.getByIdProduct(rs.getInt("id")));
             	
@@ -109,7 +110,7 @@ public class ProductDao {
             	item.setProductType(categoryDao.getProductTypeByID(rs.getInt("ProductTypeId")));
             	item.setSportType(categoryDao.getSportTypeByID(rs.getInt("SportTypeId")));
             	
-            	//Thêm mấy tấm ảnh nữa
+            	
             	ImageDao imageDao = new ImageDao();
             	item.setImages(imageDao.getByIdProduct(rs.getInt("id")));
             	
@@ -144,11 +145,10 @@ public class ProductDao {
             	item.setProductType(categoryDao.getProductTypeByID(rs.getInt("ProductTypeId")));
             	item.setSportType(categoryDao.getSportTypeByID(rs.getInt("SportTypeId")));
             	
-            	//Thêm mấy tấm ảnh nữa
+            	
             	ImageDao imageDao = new ImageDao();
             	item.setImages(imageDao.getByIdProduct(rs.getInt("id")));
-//            	ProductDetailDao productDetailDao = new ProductDetailDao();
-//            	item.setProductDetails(productDetailDao.getByIdProduct(rs.getInt("id")));
+//            	
             	
 				list.add(item);
 			}
@@ -181,11 +181,10 @@ public class ProductDao {
             	item.setProductType(categoryDao.getProductTypeByID(rs.getInt("ProductTypeId")));
             	item.setSportType(categoryDao.getSportTypeByID(rs.getInt("SportTypeId")));
             	
-            	//Thêm mấy tấm ảnh nữa
+            	
             	ImageDao imageDao = new ImageDao();
             	item.setImages(imageDao.getByIdProduct(rs.getInt("id")));
-//            	ProductDetailDao productDetailDao = new ProductDetailDao();
-//            	item.setProductDetails(productDetailDao.getByIdProduct(rs.getInt("id")));
+//            	
             	
 				list.add(item);
 			}
@@ -216,11 +215,10 @@ public class ProductDao {
             	item.setProductType(categoryDao.getProductTypeByID(rs.getInt("ProductTypeId")));
             	item.setSportType(categoryDao.getSportTypeByID(rs.getInt("SportTypeId")));
             	
-            	//Thêm mấy tấm ảnh nữa
+            	
             	ImageDao imageDao = new ImageDao();
             	item.setImages(imageDao.getByIdProduct(rs.getInt("id")));
-//            	ProductDetailDao productDetailDao = new ProductDetailDao();
-//            	item.setProductDetails(productDetailDao.getByIdProduct(rs.getInt("id")));
+//            
             	
 				list.add(item);
 			}
@@ -306,7 +304,7 @@ public class ProductDao {
             	item.setProductType(categoryDao.getProductTypeByID(rs.getInt("ProductTypeId")));
             	item.setSportType(categoryDao.getSportTypeByID(rs.getInt("SportTypeId")));
             	
-            	//Thêm mấy tấm ảnh nữa
+            	
             	ImageDao imageDao = new ImageDao();
             	item.setImages(imageDao.getByIdProduct(rs.getInt("id")));
          	
@@ -341,7 +339,7 @@ public class ProductDao {
             	item.setProductType(categoryDao.getProductTypeByID(rs.getInt("ProductTypeId")));
             	item.setSportType(categoryDao.getSportTypeByID(rs.getInt("SportTypeId")));
             	
-            	//Thêm mấy tấm ảnh nữa
+            	
             	ImageDao imageDao = new ImageDao();
             	item.setImages(imageDao.getByIdProduct(rs.getInt("id")));
 //            	
@@ -377,10 +375,10 @@ public class ProductDao {
             	item.setProductType(categoryDao.getProductTypeByID(rs.getInt("ProductTypeId")));
             	item.setSportType(categoryDao.getSportTypeByID(rs.getInt("SportTypeId")));
             	
-            	//Thêm mấy tấm ảnh nữa
+            	
             	ImageDao imageDao = new ImageDao();
             	item.setImages(imageDao.getByIdProduct(rs.getInt("id")));
-//            	
+          	
             	ArrayList<ProductDetail> listProductDetails = new ArrayList<ProductDetail>();
         		ProductDetailDao productDetailDao = new ProductDetailDao();
         		item.setProductDetails(productDetailDao.getByIdProduct(rs.getInt("id")));
@@ -449,7 +447,7 @@ public class ProductDao {
 	}
 	
 	
-	//đỡ viết hàm nhiều
+	
 	public ArrayList<Product> getProductbySQL(String sql) {
 
 		ArrayList<Product> list = new ArrayList<Product>();
@@ -468,7 +466,7 @@ public class ProductDao {
             	item.setProductType(categoryDao.getProductTypeByID(rs.getInt("ProductTypeId")));
             	item.setSportType(categoryDao.getSportTypeByID(rs.getInt("SportTypeId")));
             	
-            	//Thêm mấy tấm ảnh nữa
+            	
             	ImageDao imageDao = new ImageDao();
             	item.setImages(imageDao.getByIdProduct(rs.getInt("id")));
             	
