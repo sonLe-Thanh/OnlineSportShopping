@@ -24,10 +24,10 @@ public class UtilDb {
 
 	public void connect() {
 		if (connection == null) {
-            String dbURL = "jdbc:mysql://localhost:3306;databaseName=advancedProgramming;user=root;password=dunghoinua";
 			try {
 				Class.forName("com.mysql.jdbc.Driver");
-				connection = DriverManager.getConnection(dbURL);
+				connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/advancedProgramming",
+                        "root","dunghoinua123");
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 			}
